@@ -1,0 +1,1777 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>September Matrix Trainer</title>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
+</head>
+<body>
+<iframe sandbox="allow-scripts" referrerpolicy="no-referrer" title="September Matrix Trainer" srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
+&lt;title&gt;September Matrix Trainer&lt;/title&gt;
+&lt;style&gt;:root {
+  color-scheme: light dark;
+  background-color: var(
+    --background,
+    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
+  ) !important;
+
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: var(
+    --color-background-primary,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --card: color-mix(in oklab, var(--foreground) 5%, var(--background));
+  --card-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --popover: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255), rgb(45 45 45))
+  );
+  --popover-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --primary: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --primary-foreground: var(
+    --color-text-inverse,
+    light-dark(rgb(255 255 255), rgb(13 13 13))
+  );
+  --secondary: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
+  );
+  --secondary-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: var(
+    --color-text-secondary,
+    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
+  );
+  --accent: var(
+    --color-background-info,
+    light-dark(rgb(229 242 255), rgb(13 39 63))
+  );
+  --accent-foreground: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --destructive: var(
+    --color-text-warning,
+    light-dark(rgb(226 85 7), rgb(255 133 73))
+  );
+  --border: var(
+    --color-border-secondary,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+  --input: var(
+    --color-border-primary,
+    light-dark(
+      rgb(26 28 31 / 11.8%),
+      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+    )
+  );
+  --ring: var(
+    --color-ring-primary,
+    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
+  );
+  --font-size-base: var(--font-text-md-size, 14px);
+  --blue: light-dark(rgb(51 156 255), rgb(51 156 255));
+  --orange: light-dark(rgb(226 85 7), rgb(251 106 34));
+  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --red: light-dark(rgb(224 46 42), rgb(255 103 100));
+  --purple: light-dark(rgb(146 79 247), rgb(173 123 249));
+  --yellow: light-dark(rgb(255 195 0), rgb(255 210 64));
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans: -apple-system, system-ui, &quot;Segoe UI&quot;, sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;,
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 430;
+  --font-weight-medium: 500;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --radius: var(--border-radius-lg, 12.5px);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 1.6);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 17 17&#x27;%3E%3Cpath d=&#x27;M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z&#x27;/%3E%3C/svg%3E&quot;);
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+}
+
+:root[data-theme=&quot;light&quot;] {
+  color-scheme: light;
+}
+
+:root[data-theme=&quot;dark&quot;] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html &gt; body {
+  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
+  --color-background-primary: var(
+    --background,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --color-text-primary: var(
+    --foreground,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --color-border-secondary: var(
+    --border,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+
+  margin: 0;
+  padding: 5px;
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium, 500);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+b,
+strong,
+th {
+  font-weight: var(--font-weight-medium);
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: superellipse(1.5);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--foreground);
+  font: inherit;
+  text-align: start;
+}
+
+.table :is(th, td) {
+  padding-block: 10px;
+  padding-inline: 0 24px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+}
+
+.table-responsive &gt; .table :is(th, td) {
+  overflow-wrap: break-word;
+}
+
+.table :is(th, td):last-child {
+  padding-inline-end: 0;
+}
+
+.table :is(caption, thead th) {
+  font-weight: 600;
+}
+
+.table thead th {
+  padding-block: 8px;
+  border-bottom-color: color-mix(in srgb, var(--foreground) 16%, transparent);
+}
+
+.table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+
+.table.table-sm :is(th, td) {
+  padding-block: 6px;
+}
+
+.table.table-sm :is(th, td):not(:last-child) {
+  padding-inline-end: 16px;
+}
+
+.table :is(.text-end, [align=&quot;right&quot;]) {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.table :is(.text-center, [align=&quot;center&quot;]) {
+  text-align: center;
+}
+
+.table .text-nowrap {
+  white-space: nowrap;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: superellipse(1.5);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+#widget &gt; :not(.card, .progress) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--popover-foreground);
+  background: var(--popover);
+  box-shadow: none;
+  font-size: var(--font-size-tooltip);
+  line-height: var(--line-height-tooltip);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.progress {
+  display: flex;
+  height: 6px;
+  margin-block: calc((var(--line-height-normal, 1.5em) - 6px) / 2);
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+}
+
+.progress-bar {
+  height: 100%;
+  flex-shrink: 0;
+  border: 0;
+  background: var(--viz-series-1);
+}
+
+.viz-badge {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  color: var(--accent-foreground);
+  background: var(--accent);
+  font-weight: var(--font-weight-medium);
+}
+
+small,
+.text-small,
+.viz-badge {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls &gt; .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls &gt; .form-label &gt; :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+.btn {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn-primary {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: padding-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: padding-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--foreground);
+  background: var(--secondary);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type=&quot;file&quot;] {
+  padding: 0;
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control[type=&quot;file&quot;]::file-selector-button {
+  min-height: 26px;
+  margin-right: 8px;
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+}
+
+.form-control[type=&quot;file&quot;]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type=&quot;color&quot;] {
+  width: 40px;
+  height: 28px;
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: superellipse(1.5);
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 72px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  margin: 0;
+  padding: 0 32px 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted-foreground) 50%),
+    linear-gradient(135deg, var(--muted-foreground) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 10px) 50%;
+  background-repeat: no-repeat;
+  background-size: 4px 4px;
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-select:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-check {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+  border-color: var(--input);
+  border-radius: var(--radius-sm);
+  corner-shape: superellipse(1.5);
+  background-color: var(--secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;]:checked {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: &quot;&quot;;
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+}
+
+.form-check-input[type=&quot;radio&quot;] {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+}
+
+.form-check-input[type=&quot;radio&quot;]:checked {
+  border: 2px solid var(--primary);
+  background:
+    radial-gradient(circle, var(--primary-foreground) 0 2.5px, transparent 3px),
+    var(--primary);
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+  box-shadow: var(--shadow-sm);
+  content: &quot;&quot;;
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--primary);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 28px;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  accent-color: var(--primary);
+  background: linear-gradient(
+      color-mix(in srgb, var(--foreground) 7%, transparent),
+      color-mix(in srgb, var(--foreground) 7%, transparent)
+    )
+    center / 100% 2px no-repeat;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-webkit-slider-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range::-moz-range-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+  [aria-pressed=&quot;true&quot;],
+  [aria-selected=&quot;true&quot;],
+  .is-selected
+) {
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.btn.viz-tile:is([aria-pressed=&quot;true&quot;], [aria-selected=&quot;true&quot;], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget &gt; svg {
+  width: 100%;
+}
+
+/* Model-authored chart rules can otherwise stretch icons after these styles load. */
+svg.lucide {
+  display: block;
+  width: 16px !important;
+  height: 16px !important;
+  flex: none;
+  margin: 0 !important;
+  stroke-width: 1.6;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html&gt;body{padding:0}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;september-matrix-trainer&quot; class=&quot;smx-root&quot;&gt;
+  &lt;section class=&quot;smx-shell&quot; aria-labelledby=&quot;smx-title&quot;&gt;
+    &lt;header class=&quot;smx-header&quot;&gt;
+      &lt;div&gt;
+        &lt;p class=&quot;smx-eyebrow&quot;&gt;Практикум к уроку 2&lt;/p&gt;
+        &lt;h2 id=&quot;smx-title&quot;&gt;Соберите сентябрьскую матрицу&lt;/h2&gt;
+        &lt;p class=&quot;smx-lead&quot;&gt;Три кадровые ситуации. Для каждой свяжите событие, условия, мероприятие и контрольную дату.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;smx-counter&quot; aria-live=&quot;polite&quot;&gt;&lt;span id=&quot;smx-case-number&quot;&gt;1&lt;/span&gt; из 3&lt;/div&gt;
+    &lt;/header&gt;
+
+    &lt;div class=&quot;smx-progress&quot; aria-label=&quot;Прогресс по ситуациям&quot;&gt;
+      &lt;span class=&quot;is-active&quot;&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;article class=&quot;smx-case&quot; aria-live=&quot;polite&quot;&gt;
+      &lt;div class=&quot;smx-case-head&quot;&gt;
+        &lt;span class=&quot;smx-avatar&quot; id=&quot;smx-avatar&quot;&gt;А&lt;/span&gt;
+        &lt;div&gt;
+          &lt;p class=&quot;smx-case-label&quot; id=&quot;smx-case-label&quot;&gt;СИТУАЦИЯ 1 · ПЕРЕВОД&lt;/p&gt;
+          &lt;h3 id=&quot;smx-case-title&quot;&gt;Алексей переходит в ремонтную службу&lt;/h3&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;p class=&quot;smx-case-text&quot; id=&quot;smx-case-text&quot;&gt;&lt;/p&gt;
+    &lt;/article&gt;
+
+    &lt;div class=&quot;smx-route&quot; id=&quot;smx-route&quot; aria-label=&quot;Строка матрицы&quot;&gt;
+      &lt;div class=&quot;smx-cell is-current&quot; data-cell=&quot;event&quot;&gt;&lt;span&gt;1&lt;/span&gt;&lt;small&gt;Событие&lt;/small&gt;&lt;b&gt;—&lt;/b&gt;&lt;/div&gt;
+      &lt;div class=&quot;smx-arrow&quot; aria-hidden=&quot;true&quot;&gt;→&lt;/div&gt;
+      &lt;div class=&quot;smx-cell&quot; data-cell=&quot;condition&quot;&gt;&lt;span&gt;2&lt;/span&gt;&lt;small&gt;Условия&lt;/small&gt;&lt;b&gt;—&lt;/b&gt;&lt;/div&gt;
+      &lt;div class=&quot;smx-arrow&quot; aria-hidden=&quot;true&quot;&gt;→&lt;/div&gt;
+      &lt;div class=&quot;smx-cell&quot; data-cell=&quot;action&quot;&gt;&lt;span&gt;3&lt;/span&gt;&lt;small&gt;Мероприятие&lt;/small&gt;&lt;b&gt;—&lt;/b&gt;&lt;/div&gt;
+      &lt;div class=&quot;smx-arrow&quot; aria-hidden=&quot;true&quot;&gt;→&lt;/div&gt;
+      &lt;div class=&quot;smx-cell&quot; data-cell=&quot;date&quot;&gt;&lt;span&gt;4&lt;/span&gt;&lt;small&gt;Дата&lt;/small&gt;&lt;b&gt;—&lt;/b&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;section class=&quot;smx-question&quot; aria-labelledby=&quot;smx-question-title&quot;&gt;
+      &lt;p class=&quot;smx-step&quot; id=&quot;smx-step&quot;&gt;Шаг 1 из 4&lt;/p&gt;
+      &lt;h3 id=&quot;smx-question-title&quot;&gt;&lt;/h3&gt;
+      &lt;div class=&quot;smx-options&quot; id=&quot;smx-options&quot; role=&quot;radiogroup&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;smx-feedback&quot; id=&quot;smx-feedback&quot; role=&quot;status&quot;&gt;Выберите вариант.&lt;/div&gt;
+      &lt;button class=&quot;smx-button&quot; id=&quot;smx-check&quot; type=&quot;button&quot; disabled&gt;Проверить&lt;/button&gt;
+    &lt;/section&gt;
+
+    &lt;section class=&quot;smx-final&quot; id=&quot;smx-final&quot; hidden aria-live=&quot;polite&quot;&gt;
+      &lt;p class=&quot;smx-final-kicker&quot;&gt;Матрица готова&lt;/p&gt;
+      &lt;h3&gt;План на сентябрь исправлен&lt;/h3&gt;
+      &lt;div class=&quot;smx-result-metrics&quot;&gt;
+        &lt;div&gt;&lt;b&gt;1&lt;/b&gt;&lt;span&gt;нужное обучение оставили&lt;/span&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;b&gt;1&lt;/b&gt;&lt;span&gt;лишний курс исключили&lt;/span&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;b&gt;1&lt;/b&gt;&lt;span&gt;специальный срок сохранили&lt;/span&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;smx-final-rows&quot; id=&quot;smx-final-rows&quot;&gt;&lt;/div&gt;
+      &lt;p class=&quot;smx-final-note&quot;&gt;&lt;strong&gt;Главный результат:&lt;/strong&gt; общий график больше не управляет решениями. Для каждого работника есть свое основание, мероприятие и дата.&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/section&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+#september-matrix-trainer {
+  --smx-navy: light-dark(#173b5e, #dcecff);
+  --smx-text: light-dark(#35495d, #e8eef5);
+  --smx-muted: light-dark(#667d92, #a9b9c9);
+  --smx-blue: light-dark(#247db8, #67b9ed);
+  --smx-blue-soft: light-dark(#e9f4fb, #18384d);
+  --smx-orange: light-dark(#f4862f, #ffab64);
+  --smx-orange-soft: light-dark(#fff2e8, #4b2e1b);
+  --smx-green: light-dark(#228b59, #62d69a);
+  --smx-green-soft: light-dark(#e9f7ef, #173b2a);
+  --smx-red: light-dark(#bf4c49, #ff8d89);
+  --smx-red-soft: light-dark(#fff0ef, #482322);
+  --smx-line: light-dark(#d5e2eb, #385267);
+  --smx-surface: light-dark(#ffffff, #142532);
+  --smx-page: light-dark(#f1f7fa, #0d1b25);
+  color-scheme: light dark;
+  width: 100%;
+  color: var(--smx-text);
+  font-family: Arial, &quot;Segoe UI&quot;, sans-serif;
+  line-height: 1.4;
+}
+
+#september-matrix-trainer * { box-sizing: border-box; }
+#september-matrix-trainer button { font: inherit; }
+#september-matrix-trainer .smx-shell {
+  width: min(100%, 860px);
+  margin: 0 auto;
+  padding: 24px;
+  background: var(--smx-page);
+  border: 1px solid var(--smx-line);
+  border-radius: 24px;
+  box-shadow: 0 18px 45px light-dark(rgba(23,59,94,.10), rgba(0,0,0,.24));
+}
+
+#september-matrix-trainer .smx-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+#september-matrix-trainer .smx-eyebrow,
+#september-matrix-trainer .smx-case-label,
+#september-matrix-trainer .smx-step,
+#september-matrix-trainer .smx-final-kicker {
+  margin: 0 0 5px;
+  color: var(--smx-blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+#september-matrix-trainer h2,
+#september-matrix-trainer h3,
+#september-matrix-trainer p { margin-top: 0; }
+#september-matrix-trainer h2 {
+  margin-bottom: 6px;
+  color: var(--smx-navy);
+  font-size: clamp(24px, 4.4vw, 38px);
+  line-height: 1.08;
+}
+#september-matrix-trainer .smx-lead {
+  max-width: 650px;
+  margin-bottom: 0;
+  color: var(--smx-muted);
+  font-size: 15px;
+}
+#september-matrix-trainer .smx-counter {
+  flex: 0 0 auto;
+  padding: 8px 12px;
+  color: var(--smx-blue);
+  background: var(--smx-surface);
+  border: 1px solid var(--smx-line);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+}
+#september-matrix-trainer .smx-progress {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin: 18px 0;
+}
+#september-matrix-trainer .smx-progress span {
+  height: 5px;
+  background: var(--smx-line);
+  border-radius: 999px;
+}
+#september-matrix-trainer .smx-progress span.is-active,
+#september-matrix-trainer .smx-progress span.is-done { background: var(--smx-blue); }
+
+#september-matrix-trainer .smx-case {
+  padding: 18px;
+  background: var(--smx-surface);
+  border: 1px solid var(--smx-line);
+  border-left: 5px solid var(--smx-orange);
+  border-radius: 16px;
+}
+#september-matrix-trainer .smx-case-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+#september-matrix-trainer .smx-avatar {
+  display: grid;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  color: #fff;
+  background: var(--smx-orange);
+  border-radius: 50%;
+  font-weight: 800;
+}
+#september-matrix-trainer .smx-case h3 {
+  margin-bottom: 0;
+  color: var(--smx-navy);
+  font-size: 19px;
+  line-height: 1.2;
+}
+#september-matrix-trainer .smx-case-text {
+  margin: 13px 0 0 54px;
+  font-size: 14px;
+}
+
+#september-matrix-trainer .smx-route {
+  display: grid;
+  grid-template-columns: 1fr 22px 1fr 22px 1fr 22px 1fr;
+  align-items: stretch;
+  margin: 16px 0;
+}
+#september-matrix-trainer .smx-cell {
+  min-width: 0;
+  padding: 10px;
+  background: var(--smx-surface);
+  border: 1px solid var(--smx-line);
+  border-radius: 12px;
+  opacity: .72;
+}
+#september-matrix-trainer .smx-cell span {
+  display: inline-grid;
+  width: 22px;
+  height: 22px;
+  margin-right: 4px;
+  place-items: center;
+  color: #fff;
+  background: var(--smx-blue);
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 800;
+}
+#september-matrix-trainer .smx-cell small {
+  color: var(--smx-muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+#september-matrix-trainer .smx-cell b {
+  display: block;
+  margin-top: 6px;
+  color: var(--smx-navy);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+#september-matrix-trainer .smx-cell.is-current {
+  border-color: var(--smx-blue);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--smx-blue) 16%, transparent);
+  opacity: 1;
+}
+#september-matrix-trainer .smx-cell.is-filled {
+  background: var(--smx-blue-soft);
+  border-color: color-mix(in srgb, var(--smx-blue) 60%, var(--smx-line));
+  opacity: 1;
+}
+#september-matrix-trainer .smx-arrow {
+  display: grid;
+  place-items: center;
+  color: var(--smx-muted);
+  font-weight: 800;
+}
+
+#september-matrix-trainer .smx-question {
+  padding: 18px;
+  background: var(--smx-surface);
+  border: 1px solid var(--smx-line);
+  border-radius: 16px;
+}
+#september-matrix-trainer .smx-question h3 {
+  margin-bottom: 13px;
+  color: var(--smx-navy);
+  font-size: 18px;
+}
+#september-matrix-trainer .smx-options {
+  display: grid;
+  gap: 8px;
+}
+#september-matrix-trainer .smx-option {
+  width: 100%;
+  padding: 11px 13px;
+  color: var(--smx-text);
+  background: transparent;
+  border: 1px solid var(--smx-line);
+  border-radius: 11px;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color .15s, background .15s, transform .15s;
+}
+#september-matrix-trainer .smx-option:hover { transform: translateY(-1px); border-color: var(--smx-blue); }
+#september-matrix-trainer .smx-option:focus-visible,
+#september-matrix-trainer .smx-button:focus-visible { outline: 3px solid color-mix(in srgb, var(--smx-blue) 35%, transparent); outline-offset: 2px; }
+#september-matrix-trainer .smx-option[aria-checked=&quot;true&quot;] {
+  color: var(--smx-navy);
+  background: var(--smx-blue-soft);
+  border-color: var(--smx-blue);
+  font-weight: 700;
+}
+#september-matrix-trainer .smx-option.is-wrong {
+  background: var(--smx-red-soft);
+  border-color: var(--smx-red);
+}
+#september-matrix-trainer .smx-option.is-correct {
+  background: var(--smx-green-soft);
+  border-color: var(--smx-green);
+}
+#september-matrix-trainer .smx-feedback {
+  min-height: 44px;
+  margin: 12px 0;
+  padding: 10px 12px;
+  color: var(--smx-muted);
+  background: color-mix(in srgb, var(--smx-line) 24%, transparent);
+  border-radius: 10px;
+  font-size: 13px;
+}
+#september-matrix-trainer .smx-feedback.is-wrong { color: var(--smx-red); background: var(--smx-red-soft); }
+#september-matrix-trainer .smx-feedback.is-correct { color: var(--smx-green); background: var(--smx-green-soft); }
+#september-matrix-trainer .smx-button {
+  display: block;
+  width: min(100%, 240px);
+  margin-left: auto;
+  padding: 11px 18px;
+  color: #fff;
+  background: var(--smx-blue);
+  border: 0;
+  border-radius: 11px;
+  cursor: pointer;
+  font-weight: 800;
+}
+#september-matrix-trainer .smx-button:disabled { cursor: default; opacity: .42; }
+
+#september-matrix-trainer .smx-final {
+  padding: 22px;
+  background: var(--smx-surface);
+  border: 1px solid var(--smx-line);
+  border-top: 5px solid var(--smx-green);
+  border-radius: 18px;
+}
+#september-matrix-trainer .smx-final h3 {
+  margin-bottom: 16px;
+  color: var(--smx-navy);
+  font-size: 25px;
+}
+#september-matrix-trainer .smx-result-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+#september-matrix-trainer .smx-result-metrics div {
+  padding: 12px;
+  background: var(--smx-green-soft);
+  border-radius: 12px;
+}
+#september-matrix-trainer .smx-result-metrics b {
+  display: block;
+  color: var(--smx-green);
+  font-size: 25px;
+}
+#september-matrix-trainer .smx-result-metrics span { font-size: 12px; }
+#september-matrix-trainer .smx-final-rows { display: grid; gap: 8px; }
+#september-matrix-trainer .smx-final-row {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr;
+  gap: 10px;
+  padding: 11px 12px;
+  border: 1px solid var(--smx-line);
+  border-radius: 11px;
+  font-size: 12px;
+}
+#september-matrix-trainer .smx-final-row b { color: var(--smx-navy); }
+#september-matrix-trainer .smx-final-note {
+  margin: 14px 0 0;
+  padding: 11px 12px;
+  background: var(--smx-blue-soft);
+  border-radius: 11px;
+  font-size: 13px;
+}
+
+@media (max-width: 620px) {
+  #september-matrix-trainer .smx-shell { padding: 15px; border-radius: 18px; }
+  #september-matrix-trainer .smx-header { gap: 10px; }
+  #september-matrix-trainer .smx-counter { padding: 6px 9px; }
+  #september-matrix-trainer .smx-case-text { margin-left: 0; }
+  #september-matrix-trainer .smx-route { grid-template-columns: 1fr 1fr; gap: 7px; }
+  #september-matrix-trainer .smx-arrow { display: none; }
+  #september-matrix-trainer .smx-result-metrics { grid-template-columns: 1fr; }
+  #september-matrix-trainer .smx-final-row { grid-template-columns: 1fr; gap: 3px; }
+}
+&lt;/style&gt;
+
+&lt;script&gt;
+(() =&gt; {
+  const root = document.getElementById(&#x27;september-matrix-trainer&#x27;);
+  if (!root) return;
+
+  const cases = [
+    {
+      avatar: &#x27;А&#x27;,
+      label: &#x27;СИТУАЦИЯ 1 · ПЕРЕВОД&#x27;,
+      title: &#x27;Алексей переходит в ремонтную службу&#x27;,
+      text: &#x27;Алексея переводят 12 сентября из слесарной мастерской на ремонт конвейеров. Изменятся оборудование, характер работы и источники опасности. Часть новых операций входит в перечень работ повышенной опасности. Ранее Алексей прошел программы Б и В для прежней работы.&#x27;,
+      accent: &#x27;orange&#x27;,
+      questions: [
+        {
+          key: &#x27;event&#x27;, title: &#x27;Какое событие откроет строку?&#x27;, answer: 0, fill: &#x27;Перевод&#x27;,
+          options: [&#x27;Перевод на другую работу&#x27;, &#x27;Наступление планового срока&#x27;, &#x27;Внутреннее совместительство&#x27;],
+          ok: &#x27;Верно. Сначала фиксируем кадровое событие — перевод 12 сентября.&#x27;,
+          bad: &#x27;Нет. Основание для проверки здесь — перевод на другую работу.&#x27;
+        },
+        {
+          key: &#x27;condition&#x27;, title: &#x27;Что показало сравнение условий?&#x27;, answer: 1, fill: &#x27;Работа и опасности изменились&#x27;,
+          options: [&#x27;Все четыре характеристики сохранились&#x27;, &#x27;Изменились характер работы и источники опасности&#x27;, &#x27;Достаточно сравнить только название должности&#x27;],
+          ok: &#x27;Верно. Исключение пункта 7 не действует: работа и источники опасности изменились.&#x27;,
+          bad: &#x27;Нет. В ситуации прямо указано, что изменились характер работы и источники опасности.&#x27;
+        },
+        {
+          key: &#x27;action&#x27;, title: &#x27;Какое решение внесете в матрицу?&#x27;, answer: 2, fill: &#x27;Обучение по программам Б и В&#x27;,
+          options: [&#x27;Оставить прежнее обучение без изменений&#x27;, &#x27;Назначить только повторный инструктаж&#x27;, &#x27;Назначить обучение по программам Б и В&#x27;],
+          ok: &#x27;Верно. Программа Б нужна из-за опасностей новой работы, программа В — из-за работ повышенной опасности.&#x27;,
+          bad: &#x27;Нет. После перевода изменились опасности, а новые операции относятся к работам повышенной опасности. Нужны программы Б и В.&#x27;
+        },
+        {
+          key: &#x27;date&#x27;, title: &#x27;Как поставить контрольную дату?&#x27;, answer: 1, fill: &#x27;Не позднее 60 дней после перевода&#x27;,
+          options: [&#x27;Через три года после прежнего курса&#x27;, &#x27;В срок работодателя, но не позднее 60 календарных дней после перевода&#x27;, &#x27;В общий день обучения подразделения без проверки срока&#x27;],
+          ok: &#x27;Верно. Работодатель определит дату, но обучение после перевода нужно провести не позднее 60 календарных дней. Если профильные правила требуют раньше, применяют их срок. Для следующего планового обучения по программе В сначала смотрят профильные правила; если своего срока нет — обучают не реже раза в три года.&#x27;,
+          bad: &#x27;Нет. По Порядку № 2464 крайний срок после перевода — 60 календарных дней. Профильные правила могут потребовать провести обучение раньше.&#x27;
+        }
+      ],
+      finalAction: &#x27;Б и В&#x27;, finalDate: &#x27;≤ 60 дней после перевода&#x27;
+    },
+    {
+      avatar: &#x27;О&#x27;,
+      label: &#x27;СИТУАЦИЯ 2 · СОВМЕСТИТЕЛЬСТВО&#x27;,
+      title: &#x27;Ольге оформляют внутреннее совместительство&#x27;,
+      text: &#x27;Ольга уже работает кладовщиком. С 15 сентября ей оформляют внутреннее совместительство в том же подразделении. Работа, оборудование, условия труда, источники опасности и уровни профрисков останутся прежними. Необходимое обучение Ольга прошла, плановый срок еще не наступил.&#x27;,
+      accent: &#x27;green&#x27;,
+      questions: [
+        {
+          key: &#x27;event&#x27;, title: &#x27;Какое событие откроет строку?&#x27;, answer: 2, fill: &#x27;Внутреннее совместительство&#x27;,
+          options: [&#x27;Перевод&#x27;, &#x27;Первое трудоустройство&#x27;, &#x27;Внутреннее совместительство&#x27;],
+          ok: &#x27;Верно. Новый договор оформляют как внутреннее совместительство.&#x27;,
+          bad: &#x27;Нет. Ольгу не переводят и не принимают впервые: ей оформляют внутреннее совместительство.&#x27;
+        },
+        {
+          key: &#x27;condition&#x27;, title: &#x27;Что нужно записать после проверки?&#x27;, answer: 0, fill: &#x27;Все четыре условия сохранились&#x27;,
+          options: [&#x27;Все четыре условия сохранились, обучение уже пройдено&#x27;, &#x27;Изменилось только название договора — этого достаточно для нового курса&#x27;, &#x27;Условия можно не сравнивать&#x27;],
+          ok: &#x27;Верно. Сохранились условия труда, источники опасности, уровни профрисков и характер работы. Обучение уже пройдено.&#x27;,
+          bad: &#x27;Нет. Новый договор сам по себе не создает основание для повторного курса. Нужно проверить четыре условия.&#x27;
+        },
+        {
+          key: &#x27;action&#x27;, title: &#x27;Какое решение примете?&#x27;, answer: 1, fill: &#x27;Повторное обучение не требуется&#x27;,
+          options: [&#x27;Снова направить на программы Б и В&#x27;, &#x27;Не назначать повторное обучение и проверку знаний&#x27;, &#x27;Назначить повторный инструктаж вместо обучения&#x27;],
+          ok: &#x27;Верно. Пункт 7 разрешает не проводить повторное обучение и проверку знаний, если все условия сохранились.&#x27;,
+          bad: &#x27;Нет. При неизменных условиях и уже пройденном обучении повторный курс будет лишним.&#x27;
+        },
+        {
+          key: &#x27;date&#x27;, title: &#x27;Какую дату оставить в матрице?&#x27;, answer: 2, fill: &#x27;Прежний плановый цикл&#x27;,
+          options: [&#x27;Не позднее 60 дней после нового договора&#x27;, &#x27;Через три месяца&#x27;, &#x27;Прежнюю плановую дату&#x27;],
+          ok: &#x27;Верно. Ольга продолжит прежний плановый цикл. Предприятие не оплатит лишний курс и не будет без причины освобождать ее от смены.&#x27;,
+          bad: &#x27;Нет. Внутреннее совместительство при неизменных условиях не запускает новый срок обучения.&#x27;
+        }
+      ],
+      finalAction: &#x27;Без повторного курса&#x27;, finalDate: &#x27;Прежний плановый цикл&#x27;
+    },
+    {
+      avatar: &#x27;Н&#x27;,
+      label: &#x27;СИТУАЦИЯ 3 · ПЕРВАЯ РАБОТА&#x27;,
+      title: &#x27;Никита впервые начал трудовую деятельность&#x27;,
+      text: &#x27;Никита пришел на предприятие после колледжа и 4 сентября прошел первичный инструктаж. После необходимого обучения он получил допуск к работе повышенной опасности. Начальник поставил повторный инструктаж через шесть месяцев — на 4 марта.&#x27;,
+      accent: &#x27;blue&#x27;,
+      questions: [
+        {
+          key: &#x27;event&#x27;, title: &#x27;Какое событие влияет на срок?&#x27;, answer: 0, fill: &#x27;Первая работа и допуск к РПО&#x27;,
+          options: [&#x27;Первое начало трудовой деятельности и допуск к работе повышенной опасности&#x27;, &#x27;Обычный плановый срок подразделения&#x27;, &#x27;Внутреннее совместительство&#x27;],
+          ok: &#x27;Верно. Для такого сочетания с 31 августа 2026 года действует отдельное правило пункта 14.&#x27;,
+          bad: &#x27;Нет. Ключевое условие — Никита впервые начал трудовую деятельность и допущен к работе повышенной опасности.&#x27;
+        },
+        {
+          key: &#x27;condition&#x27;, title: &#x27;Какой факт нужно учесть?&#x27;, answer: 2, fill: &#x27;Первичный инструктаж — 4 сентября&#x27;,
+          options: [&#x27;Общий график подразделения важнее&#x27;, &#x27;Достаточно даты окончания колледжа&#x27;, &#x27;Первичный инструктаж прошел 4 сентября&#x27;],
+          ok: &#x27;Верно. От даты первичного инструктажа ставим ближайшую трехмесячную контрольную дату.&#x27;,
+          bad: &#x27;Нет. Для расчета срока нужна дата первичного инструктажа — 4 сентября.&#x27;
+        },
+        {
+          key: &#x27;action&#x27;, title: &#x27;Какое мероприятие назначите?&#x27;, answer: 0, fill: &#x27;Повторный инструктаж&#x27;,
+          options: [&#x27;Повторный инструктаж на рабочем месте&#x27;, &#x27;Повторное обучение по программе В&#x27;, &#x27;Новый вводный инструктаж&#x27;],
+          ok: &#x27;Верно. Это повторный инструктаж на рабочем месте. Он не заменяет обучение по программе В и не требует новой заявки в учебный центр.&#x27;,
+          bad: &#x27;Нет. Новое правило пункта 14 относится к повторному инструктажу на рабочем месте.&#x27;
+        },
+        {
+          key: &#x27;date&#x27;, title: &#x27;Как исправите дату?&#x27;, answer: 1, fill: &#x27;До 4 декабря; далее каждые 3 месяца&#x27;,
+          options: [&#x27;Оставить 4 марта&#x27;, &#x27;Провести не позднее 4 декабря и далее каждые три месяца в течение первого года&#x27;, &#x27;Провести в течение 60 дней после приема&#x27;],
+          ok: &#x27;Верно. В первый год повторный инструктаж проводят не реже одного раза в три месяца. Общий шестимесячный график здесь не подходит.&#x27;,
+          bad: &#x27;Нет. Первый повторный инструктаж нужно провести не позднее чем через три месяца после первичного — до 4 декабря.&#x27;
+        }
+      ],
+      finalAction: &#x27;Повторный инструктаж&#x27;, finalDate: &#x27;До 04.12, далее каждые 3 месяца&#x27;
+    }
+  ];
+
+  const refs = {
+    number: root.querySelector(&#x27;#smx-case-number&#x27;),
+    dots: [...root.querySelectorAll(&#x27;.smx-progress span&#x27;)],
+    avatar: root.querySelector(&#x27;#smx-avatar&#x27;),
+    label: root.querySelector(&#x27;#smx-case-label&#x27;),
+    title: root.querySelector(&#x27;#smx-case-title&#x27;),
+    text: root.querySelector(&#x27;#smx-case-text&#x27;),
+    route: root.querySelector(&#x27;#smx-route&#x27;),
+    step: root.querySelector(&#x27;#smx-step&#x27;),
+    questionTitle: root.querySelector(&#x27;#smx-question-title&#x27;),
+    options: root.querySelector(&#x27;#smx-options&#x27;),
+    feedback: root.querySelector(&#x27;#smx-feedback&#x27;),
+    check: root.querySelector(&#x27;#smx-check&#x27;),
+    question: root.querySelector(&#x27;.smx-question&#x27;),
+    final: root.querySelector(&#x27;#smx-final&#x27;),
+    finalRows: root.querySelector(&#x27;#smx-final-rows&#x27;)
+  };
+
+  let caseIndex = 0;
+  let questionIndex = 0;
+  let selected = null;
+  let correct = false;
+
+  function setAccent(name) {
+    const color = name === &#x27;green&#x27; ? &#x27;var(--smx-green)&#x27; : name === &#x27;blue&#x27; ? &#x27;var(--smx-blue)&#x27; : &#x27;var(--smx-orange)&#x27;;
+    root.querySelector(&#x27;.smx-case&#x27;).style.borderLeftColor = color;
+    refs.avatar.style.background = color;
+  }
+
+  function renderCase() {
+    const item = cases[caseIndex];
+    refs.number.textContent = String(caseIndex + 1);
+    refs.dots.forEach((dot, index) =&gt; {
+      dot.className = index &lt; caseIndex ? &#x27;is-done&#x27; : index === caseIndex ? &#x27;is-active&#x27; : &#x27;&#x27;;
+    });
+    refs.avatar.textContent = item.avatar;
+    refs.label.textContent = item.label;
+    refs.title.textContent = item.title;
+    refs.text.textContent = item.text;
+    setAccent(item.accent);
+    refs.route.querySelectorAll(&#x27;.smx-cell&#x27;).forEach((cell, index) =&gt; {
+      cell.classList.toggle(&#x27;is-current&#x27;, index === 0);
+      cell.classList.remove(&#x27;is-filled&#x27;);
+      cell.querySelector(&#x27;b&#x27;).textContent = &#x27;—&#x27;;
+    });
+    questionIndex = 0;
+    renderQuestion();
+  }
+
+  function renderQuestion() {
+    const q = cases[caseIndex].questions[questionIndex];
+    selected = null;
+    correct = false;
+    refs.step.textContent = `Шаг ${questionIndex + 1} из 4`;
+    refs.questionTitle.textContent = q.title;
+    refs.options.replaceChildren();
+    q.options.forEach((label, index) =&gt; {
+      const button = document.createElement(&#x27;button&#x27;);
+      button.type = &#x27;button&#x27;;
+      button.className = &#x27;smx-option&#x27;;
+      button.setAttribute(&#x27;role&#x27;, &#x27;radio&#x27;);
+      button.setAttribute(&#x27;aria-checked&#x27;, &#x27;false&#x27;);
+      button.textContent = label;
+      button.addEventListener(&#x27;click&#x27;, () =&gt; selectOption(index));
+      refs.options.appendChild(button);
+    });
+    refs.feedback.className = &#x27;smx-feedback&#x27;;
+    refs.feedback.textContent = &#x27;Выберите вариант.&#x27;;
+    refs.check.textContent = &#x27;Проверить&#x27;;
+    refs.check.disabled = true;
+    refs.route.querySelectorAll(&#x27;.smx-cell&#x27;).forEach((cell, index) =&gt; {
+      cell.classList.toggle(&#x27;is-current&#x27;, index === questionIndex);
+    });
+  }
+
+  function selectOption(index) {
+    if (correct) return;
+    selected = index;
+    [...refs.options.children].forEach((button, i) =&gt; {
+      button.setAttribute(&#x27;aria-checked&#x27;, String(i === index));
+      button.classList.remove(&#x27;is-wrong&#x27;, &#x27;is-correct&#x27;);
+    });
+    refs.feedback.className = &#x27;smx-feedback&#x27;;
+    refs.feedback.textContent = &#x27;Нажмите «Проверить».&#x27;;
+    refs.check.disabled = false;
+  }
+
+  function checkAnswer() {
+    const q = cases[caseIndex].questions[questionIndex];
+    if (correct) {
+      advance();
+      return;
+    }
+    if (selected === null) return;
+    const chosen = refs.options.children[selected];
+    if (selected === q.answer) {
+      correct = true;
+      chosen.classList.add(&#x27;is-correct&#x27;);
+      refs.feedback.className = &#x27;smx-feedback is-correct&#x27;;
+      refs.feedback.textContent = q.ok;
+      const cell = refs.route.querySelector(`[data-cell=&quot;${q.key}&quot;]`);
+      cell.querySelector(&#x27;b&#x27;).textContent = q.fill;
+      cell.classList.add(&#x27;is-filled&#x27;);
+      cell.classList.remove(&#x27;is-current&#x27;);
+      refs.check.textContent = questionIndex === 3 ? (caseIndex === 2 ? &#x27;Собрать итог&#x27; : &#x27;Следующая ситуация&#x27;) : &#x27;Продолжить&#x27;;
+    } else {
+      chosen.classList.add(&#x27;is-wrong&#x27;);
+      refs.feedback.className = &#x27;smx-feedback is-wrong&#x27;;
+      refs.feedback.textContent = q.bad;
+      refs.check.textContent = &#x27;Проверить еще раз&#x27;;
+    }
+  }
+
+  function advance() {
+    if (questionIndex &lt; 3) {
+      questionIndex += 1;
+      renderQuestion();
+      return;
+    }
+    if (caseIndex &lt; cases.length - 1) {
+      caseIndex += 1;
+      renderCase();
+      root.querySelector(&#x27;.smx-case&#x27;).scrollIntoView({ behavior: &#x27;smooth&#x27;, block: &#x27;nearest&#x27; });
+      return;
+    }
+    showFinal();
+  }
+
+  function showFinal() {
+    root.querySelector(&#x27;.smx-case&#x27;).hidden = true;
+    refs.route.hidden = true;
+    refs.question.hidden = true;
+    refs.dots.forEach(dot =&gt; dot.className = &#x27;is-done&#x27;);
+    root.querySelector(&#x27;.smx-counter&#x27;).textContent = &#x27;3 из 3&#x27;;
+    refs.finalRows.replaceChildren();
+    cases.forEach(item =&gt; {
+      const row = document.createElement(&#x27;div&#x27;);
+      row.className = &#x27;smx-final-row&#x27;;
+      row.innerHTML = `&lt;b&gt;${item.title.split(&#x27; &#x27;)[0]}&lt;/b&gt;&lt;span&gt;${item.finalAction}&lt;/span&gt;&lt;span&gt;${item.finalDate}&lt;/span&gt;`;
+      refs.finalRows.appendChild(row);
+    });
+    refs.final.hidden = false;
+    refs.final.scrollIntoView({ behavior: &#x27;smooth&#x27;, block: &#x27;nearest&#x27; });
+  }
+
+  refs.check.addEventListener(&#x27;click&#x27;, checkAnswer);
+  renderCase();
+})();
+&lt;/script&gt;
+
+&lt;script src=&quot;https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  if (window.FloatingUIDOM == null) {
+    return;
+  }
+  const { autoUpdate, computePosition, flip, offset, shift, size } =
+    window.FloatingUIDOM;
+  const tooltipPlacements = new Set([&quot;top&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;left&quot;]);
+  const tooltipId = `codex-visualization-tooltip-${
+    window.crypto?.randomUUID?.() ?? Date.now().toString(36)
+  }`;
+  const tooltipGap = 5;
+  const hoverDelay = 700;
+  const skipDelay = 300;
+  let activeTrigger = null;
+  let pendingTrigger = null;
+  let tooltip = null;
+  let openTimeout = null;
+  let autoUpdateCleanup = null;
+  let positionRequest = 0;
+  let skipDelayUntil = 0;
+
+  const getTrigger = (target) =&gt;
+    target?.nodeType === Node.ELEMENT_NODE
+      ? target.closest(&quot;[data-tooltip]&quot;)
+      : null;
+  const containsTarget = (trigger, target) =&gt;
+    target?.nodeType != null &amp;&amp; trigger.contains(target);
+  const getContent = (trigger) =&gt;
+    trigger.getAttribute(&quot;data-tooltip&quot;)?.trim() ?? &quot;&quot;;
+  const getPlacement = (trigger) =&gt; {
+    const placement = trigger.getAttribute(&quot;data-tooltip-placement&quot;);
+    return tooltipPlacements.has(placement) ? placement : &quot;top&quot;;
+  };
+  const getTooltip = () =&gt; {
+    if (tooltip == null) {
+      tooltip = document.createElement(&quot;div&quot;);
+      tooltip.id = tooltipId;
+      tooltip.className = &quot;tooltip&quot;;
+      tooltip.setAttribute(&quot;role&quot;, &quot;tooltip&quot;);
+    }
+    return tooltip;
+  };
+  const setDescribedBy = (trigger, described) =&gt; {
+    const ids = new Set(
+      (trigger.getAttribute(&quot;aria-describedby&quot;) ?? &quot;&quot;)
+        .split(/\s+/)
+        .filter(Boolean),
+    );
+    if (described) {
+      ids.add(tooltipId);
+    } else {
+      ids.delete(tooltipId);
+    }
+    if (ids.size === 0) {
+      trigger.removeAttribute(&quot;aria-describedby&quot;);
+    } else {
+      trigger.setAttribute(&quot;aria-describedby&quot;, [...ids].join(&quot; &quot;));
+    }
+  };
+  const clearOpenTimeout = () =&gt; {
+    if (openTimeout != null) {
+      window.clearTimeout(openTimeout);
+      openTimeout = null;
+    }
+    pendingTrigger = null;
+  };
+  const closeTooltip = (activateSkipDelay = true) =&gt; {
+    clearOpenTimeout();
+    positionRequest += 1;
+    autoUpdateCleanup?.();
+    autoUpdateCleanup = null;
+    if (activeTrigger == null) {
+      return;
+    }
+    setDescribedBy(activeTrigger, false);
+    activeTrigger = null;
+    tooltip?.remove();
+    if (activateSkipDelay) {
+      skipDelayUntil = Date.now() + skipDelay;
+    }
+  };
+  const updatePosition = (trigger, floating) =&gt; {
+    const request = ++positionRequest;
+    void computePosition(trigger, floating, {
+      middleware: [
+        offset(tooltipGap),
+        flip({ padding: tooltipGap }),
+        shift({ padding: tooltipGap }),
+        size({
+          padding: tooltipGap,
+          apply({ availableHeight, availableWidth, elements }) {
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-width&quot;,
+              `${Math.max(0, availableWidth)}px`,
+            );
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-height&quot;,
+              `${Math.max(0, availableHeight)}px`,
+            );
+          },
+        }),
+      ],
+      placement: getPlacement(trigger),
+      strategy: &quot;fixed&quot;,
+    })
+      .then(({ x, y }) =&gt; {
+        if (activeTrigger !== trigger || request !== positionRequest) {
+          return;
+        }
+        const scale = window.devicePixelRatio || 1;
+        floating.style.transform = `translate(${Math.round(x * scale) / scale}px, ${Math.round(y * scale) / scale}px)`;
+        floating.style.visibility = &quot;visible&quot;;
+      })
+      .catch(() =&gt; {
+        if (activeTrigger === trigger &amp;&amp; request === positionRequest) {
+          closeTooltip(false);
+        }
+      });
+  };
+  const openTooltip = (trigger) =&gt; {
+    const content = getContent(trigger);
+    if (!trigger.isConnected || content.length === 0) {
+      return;
+    }
+    clearOpenTimeout();
+    if (activeTrigger === trigger) {
+      return;
+    }
+    closeTooltip();
+    const floating = getTooltip();
+    floating.textContent = content;
+    floating.style.visibility = &quot;hidden&quot;;
+    floating.style.transform = &quot;translate(0, 0)&quot;;
+    document.body.appendChild(floating);
+    activeTrigger = trigger;
+    setDescribedBy(trigger, true);
+    autoUpdateCleanup = autoUpdate(trigger, floating, () =&gt; {
+      updatePosition(trigger, floating);
+    });
+  };
+  const requestOpen = (trigger, immediate = false) =&gt; {
+    if (
+      getContent(trigger).length === 0 ||
+      activeTrigger === trigger ||
+      pendingTrigger === trigger
+    ) {
+      return;
+    }
+    clearOpenTimeout();
+    pendingTrigger = trigger;
+    const delay =
+      immediate || activeTrigger != null || Date.now() &lt; skipDelayUntil
+        ? 0
+        : hoverDelay;
+    if (delay === 0) {
+      openTooltip(trigger);
+      return;
+    }
+    openTimeout = window.setTimeout(() =&gt; {
+      openTimeout = null;
+      pendingTrigger = null;
+      openTooltip(trigger);
+    }, delay);
+  };
+  const handlePointerOpen = (event) =&gt; {
+    if (event.pointerType === &quot;touch&quot;) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    requestOpen(trigger);
+  };
+  const handleLeave = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handleFocusIn = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger?.matches(&quot;:focus-visible&quot;)) {
+      requestOpen(trigger, true);
+    }
+  };
+  const handleKeyDown = (event) =&gt; {
+    if (event.key === &quot;Escape&quot;) {
+      closeTooltip();
+    }
+  };
+  const handleContextMenu = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const destroy = () =&gt; {
+    closeTooltip(false);
+    document.removeEventListener(&quot;pointerover&quot;, handlePointerOpen);
+    document.removeEventListener(&quot;pointerout&quot;, handleLeave);
+    document.removeEventListener(&quot;focusin&quot;, handleFocusIn);
+    document.removeEventListener(&quot;focusout&quot;, handleLeave);
+    document.removeEventListener(&quot;keydown&quot;, handleKeyDown);
+    document.removeEventListener(&quot;contextmenu&quot;, handleContextMenu);
+    tooltip = null;
+  };
+
+  document.addEventListener(&quot;pointerover&quot;, handlePointerOpen);
+  document.addEventListener(&quot;pointerout&quot;, handleLeave);
+  document.addEventListener(&quot;focusin&quot;, handleFocusIn);
+  document.addEventListener(&quot;focusout&quot;, handleLeave);
+  document.addEventListener(&quot;keydown&quot;, handleKeyDown);
+  document.addEventListener(&quot;contextmenu&quot;, handleContextMenu);
+  window.addEventListener(&quot;pagehide&quot;, destroy, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-lucide&quot; async src=&quot;https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  const initialize = () =&gt; {
+    globalThis.lucide?.createIcons({ attrs: { width: 16, height: 16 } });
+  };
+  if (globalThis.lucide != null) {
+    initialize();
+    return;
+  }
+  document
+    .getElementById(&quot;codex-visualization-lucide&quot;)
+    ?.addEventListener(&quot;load&quot;, initialize, { once: true });
+})();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+</body>
+</html>
